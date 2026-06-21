@@ -9,10 +9,20 @@ const PORT = process.env.PORT || 5000;
 
 // Enable CORS for API requests and tracking script ingestion
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://webpage-analytics.vercel.app/' // replace with your actual Vercel URL
-  ]
+  origin: (origin, callback) => {
+    const allowed = [
+      'http://localhost:5173',
+      'http://localhost:3000',
+      'https://webpage-analytics.vercel.app', // Vercel dashboard (update with your actual URL)
+    ];
+    // Allow requests with no origin (e.g. tracker.js from any website, server-to-server)
+    if (!origin || allowed.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(null, true); // Permissive for tracker.js — lock down if needed
+    }
+  },
+  credentials: true
 }));
 app.use(express.json());
 
