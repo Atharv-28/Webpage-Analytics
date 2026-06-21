@@ -20,10 +20,13 @@ function App() {
   const [loadingEvents, setLoadingEvents] = useState(false);
   const [errorMsg, setErrorMsg] = useState(null);
 
+  // Backend API base URL — uses env var in production, empty string locally (Vite proxies /api)
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+
   // Load database status
   const fetchDbStatus = async () => {
     try {
-      const response = await fetch('/api/db-status');
+      const response = await fetch(`${API_BASE}/api/db-status`);
       if (response.ok) {
         const data = await response.json();
         setDbStatus(data);
@@ -38,7 +41,7 @@ function App() {
     if (!showSilently) setLoadingSessions(true);
     setErrorMsg(null);
     try {
-      const response = await fetch('/api/sessions');
+      const response = await fetch(`${API_BASE}/api/sessions`);
       if (!response.ok) throw new Error('API server returned an error');
       const data = await response.json();
       setSessions(data);
@@ -54,7 +57,7 @@ function App() {
   const fetchSessionEvents = async (sessionId, silent = false) => {
     if (!silent) setLoadingEvents(true);
     try {
-      const response = await fetch(`/api/sessions/${sessionId}`);
+      const response = await fetch(`${API_BASE}/api/sessions/${sessionId}`);
       if (!response.ok) throw new Error('API server returned an error');
       const data = await response.json();
       setSelectedSessionEvents(data);

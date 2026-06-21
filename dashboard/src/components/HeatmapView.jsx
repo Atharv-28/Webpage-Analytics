@@ -16,6 +16,9 @@ export const HeatmapView = ({ sessions }) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
 
+  // Backend API base URL — empty string locally (Vite proxy), Render URL in production
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+
   // Extract unique URLs from sessions
   useEffect(() => {
     const uniqueUrls = new Set();
@@ -38,7 +41,7 @@ export const HeatmapView = ({ sessions }) => {
     const fetchHeatmapData = async (silent = false) => {
       if (!silent) setLoading(true);
       try {
-        const response = await fetch(`/api/heatmap?url=${encodeURIComponent(selectedUrl)}`);
+        const response = await fetch(`${API_BASE}/api/heatmap?url=${encodeURIComponent(selectedUrl)}`);
         const data = await response.json();
         setClicks(data);
       } catch (err) {
