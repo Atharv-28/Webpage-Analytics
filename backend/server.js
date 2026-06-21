@@ -8,7 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Enable CORS for API requests and tracking script ingestion
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://webpage-analytics.vercel.app/' // replace with your actual Vercel URL
+  ]
+}));
 app.use(express.json());
 
 // Serve static assets from 'public' folder (e.g. tracker.js, demo.html)
