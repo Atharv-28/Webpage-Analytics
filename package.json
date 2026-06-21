@@ -1,0 +1,15 @@
+{
+  "name": "user-analytics-project",
+  "version": "1.0.0",
+  "description": "Full-stack user analytics tracking system and dashboard",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix dashboard",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:dashboard": "npm run dev --prefix dashboard",
+    "dev": "concurrently --kill-others \"npm run dev:backend\" \"npm run dev:dashboard\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
