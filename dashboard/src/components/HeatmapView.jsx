@@ -6,7 +6,7 @@ export const HeatmapView = ({ sessions }) => {
   const [selectedUrl, setSelectedUrl] = useState('');
   const [clicks, setClicks] = useState([]);
   const [loading, setLoading] = useState(false);
-  
+
   // Customizer state
   const [dotRadius, setDotRadius] = useState(25);
   const [dotOpacity, setDotOpacity] = useState(0.8);
@@ -27,7 +27,7 @@ export const HeatmapView = ({ sessions }) => {
     });
     const urlList = Array.from(uniqueUrls);
     setUrls(urlList);
-    
+
     // Auto-select first URL if available
     if (urlList.length > 0 && !selectedUrl) {
       setSelectedUrl(urlList[0]);
@@ -78,7 +78,7 @@ export const HeatmapView = ({ sessions }) => {
 
       // Create glowing radial gradient for heat mapping
       const gradient = ctx.createRadialGradient(x, y, 2, x, y, dotRadius);
-      
+
       // Heat color ranges: hot red inside -> orange/yellow -> green -> transparent
       gradient.addColorStop(0, `rgba(239, 68, 68, ${dotOpacity})`);
       gradient.addColorStop(0.2, `rgba(245, 158, 11, ${dotOpacity * 0.75})`);
@@ -155,18 +155,16 @@ export const HeatmapView = ({ sessions }) => {
     }
   };
 
-  // Determine if URL is a publicly accessible demo page to load inside iframe
-  // Exclude localhost URLs — they can't be loaded in an iframe when the dashboard is deployed
-  const isLocalhost = selectedUrl && (selectedUrl.includes('localhost') || selectedUrl.includes('127.0.0.1'));
-  const isDemoUrl = selectedUrl && !isLocalhost && (selectedUrl.includes('/demo') || selectedUrl.endsWith('demo.html'));
+  // Determine if URL is local demo to load inside iframe
+  const isDemoUrl = selectedUrl && (selectedUrl.includes('/demo') || selectedUrl.endsWith('demo.html'));
 
   return (
     <div className="heatmap-view-container animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-      
+
       {/* 1. Header controls panel */}
       <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-          
+
           {/* Selector */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <label htmlFor="url-select" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: '600' }}>
@@ -202,7 +200,7 @@ export const HeatmapView = ({ sessions }) => {
 
           {/* Controls */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-            
+
             {/* Radius slider */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Size:</span>
@@ -299,13 +297,13 @@ export const HeatmapView = ({ sessions }) => {
       </div>
 
       {/* 2. Visual heatmap stage */}
-      <div 
+      <div
         ref={containerRef}
-        className="heatmap-stage-outer" 
-        style={{ 
-          position: 'relative', 
-          backgroundColor: '#111625', 
-          borderRadius: '12px', 
+        className="heatmap-stage-outer"
+        style={{
+          position: 'relative',
+          backgroundColor: '#111625',
+          borderRadius: '12px',
           border: '1px solid var(--border-color)',
           overflow: 'auto',
           height: '650px',
@@ -328,11 +326,11 @@ export const HeatmapView = ({ sessions }) => {
             <span style={{ fontSize: '0.8rem' }}>Interact with the page to trigger click tracking.</span>
           </div>
         ) : (
-          <div 
-            className="heatmap-scale-wrapper" 
-            style={{ 
-              position: 'relative', 
-              width: `${dimensions.width * zoom}px`, 
+          <div
+            className="heatmap-scale-wrapper"
+            style={{
+              position: 'relative',
+              width: `${dimensions.width * zoom}px`,
               height: `${dimensions.height * zoom}px`,
               margin: '0 auto',
               overflow: 'hidden'
