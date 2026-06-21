@@ -155,8 +155,10 @@ export const HeatmapView = ({ sessions }) => {
     }
   };
 
-  // Determine if URL is local demo to load inside iframe
-  const isDemoUrl = selectedUrl && (selectedUrl.includes('/demo') || selectedUrl.endsWith('demo.html'));
+  // Determine if URL is a publicly accessible demo page to load inside iframe
+  // Exclude localhost URLs — they can't be loaded in an iframe when the dashboard is deployed
+  const isLocalhost = selectedUrl && (selectedUrl.includes('localhost') || selectedUrl.includes('127.0.0.1'));
+  const isDemoUrl = selectedUrl && !isLocalhost && (selectedUrl.includes('/demo') || selectedUrl.endsWith('demo.html'));
 
   return (
     <div className="heatmap-view-container animate-fade-in" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
