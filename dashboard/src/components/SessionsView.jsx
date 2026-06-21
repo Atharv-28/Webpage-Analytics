@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import MouseIcon from '@mui/icons-material/Mouse';
 
 export const SessionsView = ({
   sessions,
@@ -175,8 +176,8 @@ export const SessionsView = ({
       {/* 2. Right Pane: User Journey Details */}
       <div className="journey-panel card" style={{ display: 'flex', flexDirection: 'column', height: 'calc(100vh - 140px)', overflow: 'hidden' }}>
         {!selectedSessionId ? (
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifycontent: 'center', flexGrow: 1, color: 'var(--text-muted)', gap: '1rem' }}>
-            <div style={{ fontSize: '3rem' }}>🎯</div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1, color: 'var(--text-muted)', gap: '1rem' }}>
+            <div style={{ fontSize: '3rem', color: 'var(--accent-blue)' }}><MouseIcon fontSize="inherit" /></div>
             <h3>Select a session to view user journey</h3>
             <p style={{ fontSize: '0.9rem', maxWidth: '360px', textAlign: 'center' }}>
               Explore the detailed actions, timestamps, and page interactions performed by the customer in this session.

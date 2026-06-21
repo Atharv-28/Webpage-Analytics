@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { SessionsView } from './components/SessionsView';
 import { HeatmapView } from './components/HeatmapView';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import WhatshotIcon from '@mui/icons-material/Whatshot';
+import SyncIcon from '@mui/icons-material/Sync';
+import WarningIcon from '@mui/icons-material/Warning';
 
 function App() {
   const [activeTab, setActiveTab] = useState('sessions');
@@ -47,8 +51,8 @@ function App() {
   };
 
   // Load specific session events
-  const fetchSessionEvents = async (sessionId) => {
-    setLoadingEvents(true);
+  const fetchSessionEvents = async (sessionId, silent = false) => {
+    if (!silent) setLoadingEvents(true);
     try {
       const response = await fetch(`/api/sessions/${sessionId}`);
       if (!response.ok) throw new Error('API server returned an error');
@@ -57,7 +61,7 @@ function App() {
     } catch (err) {
       console.error(`Error fetching events for session ${sessionId}:`, err);
     } finally {
-      setLoadingEvents(false);
+      if (!silent) setLoadingEvents(false);
     }
   };
 
@@ -74,13 +78,22 @@ function App() {
     return () => clearInterval(timer);
   }, []);
 
-  // Sync session selection fetch
+  // Sync session selection fetch and setup live syncing polling
   useEffect(() => {
-    if (selectedSessionId) {
-      fetchSessionEvents(selectedSessionId);
-    } else {
+    if (!selectedSessionId) {
       setSelectedSessionEvents([]);
+      return;
     }
+
+    // Fetch immediately on select
+    fetchSessionEvents(selectedSessionId);
+
+    // Setup polling for the active session's events every 5 seconds
+    const timer = setInterval(() => {
+      fetchSessionEvents(selectedSessionId, true);
+    }, 5000);
+
+    return () => clearInterval(timer);
   }, [selectedSessionId]);
 
   const handleRefresh = () => {
@@ -108,14 +121,14 @@ function App() {
               onClick={() => setActiveTab('sessions')}
               className={`nav-item ${activeTab === 'sessions' ? 'active' : ''}`}
             >
-              📊 Sessions Journey
+              <BarChartIcon fontSize="small" /> Sessions Journey
             </button>
             <button 
               id="tab-btn-heatmap"
               onClick={() => setActiveTab('heatmap')}
               className={`nav-item ${activeTab === 'heatmap' ? 'active' : ''}`}
             >
-              🔥 Heatmap Viewer
+              <WhatshotIcon fontSize="small" /> Heatmap Viewer
             </button>
           </nav>
         </div>
@@ -190,7 +203,7 @@ function App() {
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--border-color)'}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--bg-card)'}
           >
-            🔄 Sync Data
+            <SyncIcon fontSize="small" /> Sync Data
           </button>
         </header>
 
@@ -209,13 +222,13 @@ function App() {
               maxWidth: '400px',
               margin: '2rem auto'
             }}>
-              <span style={{ fontSize: '2.5rem' }}>⚠️</span>
+              <span style={{ fontSize: '2.5rem', color: '#f59e0b' }}><WarningIcon fontSize="inherit" /></span>
               <h4>Connection Error</h4>
               <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{errorMsg}</p>
               <button 
                 onClick={handleRefresh} 
                 style={{
-                  background: 'var(--accent-gradient)',
+                  background: 'var(--accent-blue)',
                   border: 'none',
                   color: 'white',
                   padding: '0.5rem 1.25rem',

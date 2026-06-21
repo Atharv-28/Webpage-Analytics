@@ -720,5 +720,839 @@
     },
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
     "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:08:54.930Z",
+    "metadata": {
+      "title": "CausalFunnel Analytics Demo Shop",
+      "referrer": "",
+      "screenWidth": 1536,
+      "screenHeight": 730
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:09:02.267Z",
+    "metadata": {
+      "elementTag": "a",
+      "elementId": "nav-features",
+      "elementClass": "",
+      "elementText": "Products",
+      "x": 802,
+      "y": 39,
+      "clientX": 802,
+      "clientY": 39,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.4902200488997555,
+      "yRatio": 0.02276707530647986
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:09:14.736Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "",
+      "elementClass": "add-to-cart-btn",
+      "elementText": "Add to Cart",
+      "x": 481,
+      "y": 1131,
+      "clientX": 481,
+      "clientY": 631,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.2940097799511002,
+      "yRatio": 0.660245183887916
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:09:18.095Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "",
+      "elementClass": "add-to-cart-btn",
+      "elementText": "Add to Cart",
+      "x": 869,
+      "y": 1131,
+      "clientX": 869,
+      "clientY": 631,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.5311735941320294,
+      "yRatio": 0.660245183887916
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:09:22.997Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "cart-icon-button",
+      "elementClass": "cart-btn",
+      "elementText": "🛒 Cart\n2",
+      "x": 1448,
+      "y": 539,
+      "clientX": 1448,
+      "clientY": 39,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.8850855745721271,
+      "yRatio": 0.31465265615878574
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:09:36.511Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "btn-hero-start",
+      "elementClass": "btn btn-primary",
+      "elementText": "Start Tracking Free",
+      "x": 680,
+      "y": 488,
+      "clientX": 680,
+      "clientY": 488,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.4156479217603912,
+      "yRatio": 0.28488032691185056
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:09:39.617Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "btn-hero-demo",
+      "elementClass": "btn btn-secondary",
+      "elementText": "Book a Demo",
+      "x": 877,
+      "y": 488,
+      "clientX": 877,
+      "clientY": 488,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.5360635696821516,
+      "yRatio": 0.28488032691185056
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:10:00.810Z",
+    "metadata": {
+      "elementTag": "a",
+      "elementId": "nav-about",
+      "elementClass": "",
+      "elementText": "About",
+      "x": 975,
+      "y": 39,
+      "clientX": 975,
+      "clientY": 39,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.5959657701711492,
+      "yRatio": 0.02276707530647986
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:10:22.782Z",
+    "metadata": {
+      "title": "CausalFunnel Analytics Demo Shop",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 1713
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:10:35.518Z",
+    "metadata": {
+      "title": "CausalFunnel Analytics Demo Shop",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 1713
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:11:01.069Z",
+    "metadata": {
+      "title": "CausalFunnel Analytics Demo Shop",
+      "referrer": "",
+      "screenWidth": 1536,
+      "screenHeight": 730
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:11:06.742Z",
+    "metadata": {
+      "elementTag": "a",
+      "elementId": "nav-pricing",
+      "elementClass": "",
+      "elementText": "Pricing",
+      "x": 894,
+      "y": 39,
+      "clientX": 894,
+      "clientY": 39,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.5464547677261614,
+      "yRatio": 0.02276707530647986
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:11:08.398Z",
+    "metadata": {
+      "elementTag": "a",
+      "elementId": "nav-pricing",
+      "elementClass": "",
+      "elementText": "Pricing",
+      "x": 894,
+      "y": 39,
+      "clientX": 894,
+      "clientY": 39,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.5464547677261614,
+      "yRatio": 0.02276707530647986
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:11:10.009Z",
+    "metadata": {
+      "elementTag": "a",
+      "elementId": "nav-pricing",
+      "elementClass": "",
+      "elementText": "Pricing",
+      "x": 894,
+      "y": 39,
+      "clientX": 894,
+      "clientY": 39,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1636,
+      "docHeight": 1713,
+      "xRatio": 0.5464547677261614,
+      "yRatio": 0.02276707530647986
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:15:14.229Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "",
+      "screenWidth": 1536,
+      "screenHeight": 730
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:15:42.313Z",
+    "metadata": {
+      "elementTag": "div",
+      "elementId": "card-headphones",
+      "elementClass": "product-card",
+      "elementText": "AUDIO\nAura Wireless Headphones\n\nAdvanced noise-can",
+      "x": 300,
+      "y": 1304,
+      "clientX": 300,
+      "clientY": 110,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1536,
+      "docHeight": 2476,
+      "xRatio": 0.1953125,
+      "yRatio": 0.5266558966074314
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:15:53.364Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "",
+      "screenWidth": 1536,
+      "screenHeight": 730
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:16:19.141Z",
+    "metadata": {
+      "elementTag": "div",
+      "elementId": "",
+      "elementClass": "product-image",
+      "elementText": "",
+      "x": 300,
+      "y": 1450,
+      "clientX": 300,
+      "clientY": 650,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1536,
+      "docHeight": 2476,
+      "xRatio": 0.1953125,
+      "yRatio": 0.5856219709208401
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:16:49.431Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "",
+      "screenWidth": 1536,
+      "screenHeight": 730
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:17:08.279Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "",
+      "screenWidth": 1536,
+      "screenHeight": 730
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:17:49.572Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "",
+      "screenWidth": 1536,
+      "screenHeight": 730
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:18:05.936Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "",
+      "screenWidth": 1536,
+      "screenHeight": 730
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:18:16.681Z",
+    "metadata": {
+      "elementTag": "div",
+      "elementId": "",
+      "elementClass": "products-grid",
+      "elementText": "AUDIO\nAura Wireless Headphones\n\nAdvanced noise-can",
+      "x": 554,
+      "y": 1450,
+      "clientX": 554,
+      "clientY": 650,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1536,
+      "docHeight": 2476,
+      "xRatio": 0.3606770833333333,
+      "yRatio": 0.5856219709208401
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:18:23.120Z",
+    "metadata": {
+      "elementTag": "div",
+      "elementId": "",
+      "elementClass": "product-image",
+      "elementText": "",
+      "x": 809,
+      "y": 1450,
+      "clientX": 809,
+      "clientY": 650,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1536,
+      "docHeight": 2476,
+      "xRatio": 0.5266927083333334,
+      "yRatio": 0.5856219709208401
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:21:50.321Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:22:54.754Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:23:26.725Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:23:38.970Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:24:30.757Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:24:43.649Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:25:47.611Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:26:01.414Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:26:51.173Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "",
+      "elementClass": "add-to-cart-btn",
+      "elementText": "ADD TO CART",
+      "x": 461,
+      "y": 1275,
+      "clientX": 461,
+      "clientY": 475,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1536,
+      "docHeight": 2476,
+      "xRatio": 0.3001302083333333,
+      "yRatio": 0.5149434571890146
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:26:55.744Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "",
+      "elementClass": "add-to-cart-btn",
+      "elementText": "ADD TO CART",
+      "x": 852,
+      "y": 1275,
+      "clientX": 852,
+      "clientY": 475,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1536,
+      "docHeight": 2476,
+      "xRatio": 0.5546875,
+      "yRatio": 0.5149434571890146
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:27:00.151Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "",
+      "elementClass": "add-to-cart-btn",
+      "elementText": "ADD TO CART",
+      "x": 1244,
+      "y": 1275,
+      "clientX": 1244,
+      "clientY": 475,
+      "screenWidth": 1536,
+      "screenHeight": 730,
+      "docWidth": 1536,
+      "docHeight": 2476,
+      "xRatio": 0.8098958333333334,
+      "yRatio": 0.5149434571890146
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:27:11.375Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:27:37.916Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "",
+      "screenWidth": 1536,
+      "screenHeight": 730
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-mbdbvcuzw-mqo5tyis",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:27:51.386Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-lrtsaiia0-mqo7b7es",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:50:19.229Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "",
+      "screenWidth": 1528,
+      "screenHeight": 732
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-lrtsaiia0-mqo7b7es",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:51:02.106Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-lrtsaiia0-mqo7b7es",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:51:13.980Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "btn-hero-demo",
+      "elementClass": "btn btn-secondary",
+      "elementText": "LEARN MORE",
+      "x": 865,
+      "y": 434,
+      "clientX": 865,
+      "clientY": 334,
+      "screenWidth": 1528,
+      "screenHeight": 732,
+      "docWidth": 1513,
+      "docHeight": 2476,
+      "xRatio": 0.5717118307997356,
+      "yRatio": 0.1752827140549273
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-lrtsaiia0-mqo7b7es",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:51:17.439Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-lrtsaiia0-mqo7b7es",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:51:24.422Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-lrtsaiia0-mqo7b7es",
+    "eventType": "click",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:51:28.468Z",
+    "metadata": {
+      "elementTag": "button",
+      "elementId": "cart-icon-button",
+      "elementClass": "cart-btn",
+      "elementText": "CART\n0",
+      "x": 1425,
+      "y": 155,
+      "clientX": 1425,
+      "clientY": 55,
+      "screenWidth": 1528,
+      "screenHeight": 732,
+      "docWidth": 1513,
+      "docHeight": 2476,
+      "xRatio": 0.9418374091209517,
+      "yRatio": 0.06260096930533118
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+    "ip": "::1"
+  },
+  {
+    "sessionId": "cf-sess-lrtsaiia0-mqo7b7es",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:51:32.435Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+    "ip": "::ffff:127.0.0.1"
+  },
+  {
+    "sessionId": "cf-sess-lrtsaiia0-mqo7b7es",
+    "eventType": "page_view",
+    "url": "http://localhost:5000/demo",
+    "timestamp": "2026-06-21T19:51:36.492Z",
+    "metadata": {
+      "title": "AURA Concept Store",
+      "referrer": "http://localhost:5173/",
+      "screenWidth": 1636,
+      "screenHeight": 2476
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+    "ip": "::1"
   }
 ]

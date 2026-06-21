@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import TouchAppIcon from '@mui/icons-material/TouchApp';
 
 export const HeatmapView = ({ sessions }) => {
   const [urls, setUrls] = useState([]);
@@ -10,6 +11,7 @@ export const HeatmapView = ({ sessions }) => {
   const [dotRadius, setDotRadius] = useState(25);
   const [dotOpacity, setDotOpacity] = useState(0.8);
   const [showIframe, setShowIframe] = useState(true);
+  const [zoom, setZoom] = useState(0.75); // default zoom scale factor (75%)
 
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
@@ -29,12 +31,12 @@ export const HeatmapView = ({ sessions }) => {
     }
   }, [sessions]);
 
-  // Fetch click events when URL changes
+  // Fetch click events when URL changes and setup periodic syncing
   useEffect(() => {
     if (!selectedUrl) return;
 
-    const fetchHeatmapData = async () => {
-      setLoading(true);
+    const fetchHeatmapData = async (silent = false) => {
+      if (!silent) setLoading(true);
       try {
         const response = await fetch(`/api/heatmap?url=${encodeURIComponent(selectedUrl)}`);
         const data = await response.json();
@@ -42,11 +44,18 @@ export const HeatmapView = ({ sessions }) => {
       } catch (err) {
         console.error('Error fetching heatmap clicks:', err);
       } finally {
-        setLoading(false);
+        if (!silent) setLoading(false);
       }
     };
 
     fetchHeatmapData();
+
+    // Auto-sync heatmap clicks every 5 seconds
+    const interval = setInterval(() => {
+      fetchHeatmapData(true);
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, [selectedUrl]);
 
   // Draw Heatmap Canvas
@@ -222,6 +231,23 @@ export const HeatmapView = ({ sessions }) => {
               </span>
             </div>
 
+            {/* Zoom / Scale factor */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Zoom:</span>
+              <input
+                type="range"
+                min="0.25"
+                max="1.0"
+                step="0.05"
+                value={zoom}
+                onChange={(e) => setZoom(Number(e.target.value))}
+                style={{ cursor: 'pointer', width: '100px' }}
+              />
+              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', width: '35px' }}>
+                {Math.round(zoom * 100)}%
+              </span>
+            </div>
+
             {/* Background toggle */}
             {isDemoUrl && (
               <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
@@ -291,8 +317,8 @@ export const HeatmapView = ({ sessions }) => {
             Please select a tracked URL from the options to visualize.
           </div>
         ) : clicks.length === 0 ? (
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', gap: '0.5rem', color: 'var(--text-muted)' }}>
-            <div style={{ fontSize: '2rem' }}>❄️</div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', gap: '1rem', color: 'var(--text-muted)' }}>
+            <div style={{ fontSize: '3rem', color: 'var(--text-muted)' }}><TouchAppIcon fontSize="inherit" /></div>
             <span>No click events recorded for this URL.</span>
             <span style={{ fontSize: '0.8rem' }}>Interact with the page to trigger click tracking.</span>
           </div>
@@ -301,70 +327,83 @@ export const HeatmapView = ({ sessions }) => {
             className="heatmap-scale-wrapper" 
             style={{ 
               position: 'relative', 
-              width: `${dimensions.width}px`, 
-              height: `${dimensions.height}px`,
+              width: `${dimensions.width * zoom}px`, 
+              height: `${dimensions.height * zoom}px`,
               margin: '0 auto',
+              overflow: 'hidden'
             }}
           >
-            {/* Background Layer: Live Iframe pointing to /demo */}
-            {isDemoUrl && showIframe ? (
-              <iframe
-                id="heatmap-background-iframe"
-                src={selectedUrl}
-                title="Heatmap Demo Page Frame"
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  border: 'none',
-                  pointerEvents: 'none', // Prevents clicks inside frame from stealing events
-                  opacity: 0.55,
-                  zIndex: 1
-                }}
-              />
-            ) : (
-              // Fallback dark grid board
-              <div
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                  background: 'radial-gradient(var(--border-color) 1px, transparent 1px)',
-                  backgroundSize: '24px 24px',
-                  backgroundColor: '#0a0d16',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  zIndex: 1
-                }}
-              >
-                <div style={{ color: 'rgba(255,255,255,0.05)', fontSize: '1.5rem', textAlign: 'center', fontWeight: 'bold' }}>
-                  GRID VISUALIZATION STAGE<br />
-                  <span style={{ fontSize: '0.85rem' }}>({dimensions.width}px x {dimensions.height}px)</span>
-                </div>
-              </div>
-            )}
-
-            {/* Heatmap Overlay Canvas */}
-            <canvas
-              ref={canvasRef}
-              id="heatmap-overlay-canvas"
-              width={dimensions.width}
-              height={dimensions.height}
+            <div
               style={{
+                width: `${dimensions.width}px`,
+                height: `${dimensions.height}px`,
+                transform: `scale(${zoom})`,
+                transformOrigin: 'top left',
                 position: 'absolute',
                 top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                zIndex: 10,
-                pointerEvents: 'none' // Click-through
+                left: 0
               }}
-            />
+            >
+              {/* Background Layer: Live Iframe pointing to /demo */}
+              {isDemoUrl && showIframe ? (
+                <iframe
+                  id="heatmap-background-iframe"
+                  src={selectedUrl}
+                  title="Heatmap Demo Page Frame"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    border: 'none',
+                    pointerEvents: 'none', // Prevents clicks inside frame from stealing events
+                    opacity: 0.55,
+                    zIndex: 1
+                  }}
+                />
+              ) : (
+                // Fallback dark grid board
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    background: 'radial-gradient(var(--border-color) 1px, transparent 1px)',
+                    backgroundSize: '24px 24px',
+                    backgroundColor: '#0a0d16',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 1
+                  }}
+                >
+                  <div style={{ color: 'rgba(255,255,255,0.05)', fontSize: '1.5rem', textAlign: 'center', fontWeight: 'bold' }}>
+                    GRID VISUALIZATION STAGE<br />
+                    <span style={{ fontSize: '0.85rem' }}>({dimensions.width}px x {dimensions.height}px)</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Heatmap Overlay Canvas */}
+              <canvas
+                ref={canvasRef}
+                id="heatmap-overlay-canvas"
+                width={dimensions.width}
+                height={dimensions.height}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  zIndex: 10,
+                  pointerEvents: 'none' // Click-through
+                }}
+              />
+            </div>
           </div>
         )}
       </div>
