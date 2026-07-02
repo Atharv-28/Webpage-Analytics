@@ -48,8 +48,8 @@ function saveToFallbackDb(event) {
 
 // Connect to MongoDB with timeout
 async function connectDb() {
-  const mongoUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/user-analytics';
-  console.log(`Attempting to connect to MongoDB at: ${mongoUri}...`);
+  const mongoUri = process.env.MONGODB_URI;
+  console.log(`Attempting to connect to MongoDB`);
   
   try {
     // Attempt Mongoose connection with a short 2.5-second timeout
